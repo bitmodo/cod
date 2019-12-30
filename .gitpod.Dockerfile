@@ -10,12 +10,12 @@ RUN sudo apt-get update \
     python3-setuptools \
     python3-wheel \
     ninja-build \
-    && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/*
+    && sudo apt-get clean && sudo rm -rf /var/lib/apt/lists/* /tmp/*
 RUN sudo pip3 install meson
 
 # CCache
 RUN sudo apt-get update \
     && sudo apt install -yq \
     ccache \
-    && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/*
+    && sudo apt-get clean && sudo rm -rf /var/lib/apt/lists/* /tmp/*
 RUN sudo /usr/sbin/update-ccache-symlinks
