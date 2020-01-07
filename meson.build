@@ -5,11 +5,11 @@ project('cod', 'c',
 subdir('include/cod')
 
 # Networking layer
-net_proj = subproject('net')
+net_proj = subproject('libnet')
 net_dep = net_proj.get_variable('net_dep')
 
 # HTTP API
-http_proj = subproject('http')
+http_proj = subproject('libhttp')
 http_dep = http_proj.get_variable('http_dep')
 
 # Cod stuff
